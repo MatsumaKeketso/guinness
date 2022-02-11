@@ -1,38 +1,204 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@import-normalise;
+.container {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  background-color: #ffffff;
+  overflow: hidden;
+  /* display: none; */
+}
+
+
+.top-row {
+  width: 100%;
+  height: calc(100vh - 50px);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: visible;
+}
+.bottom-row {
+  box-sizing: border-box;
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 10px;
+  overflow: hidden;
 }
-
-.App-link {
-  color: #61dafb;
+.left-col {
+  box-sizing: border-box;
+  height: 100%;
+  flex-shrink: 0;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px;
+  overflow: visible;
 }
+.imagecontainer {
+  flex: 1;
+  flex-shrink: 0;
+  width: 100%;
+  overflow: visible;
+}
+.robotHand {
+  width: 100%;
+  flex: 1;
+}
+.logos {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+.mlabLogo {
+  height: 100%;
+  object-fit: contain;
+}
+.right-col {
+  box-sizing: border-box;
+  flex: 1;
+  width: auto;
+  height: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background: linear-gradient(147deg, #47d4ff 0%, rgb(121, 0, 158) 100%);
+  overflow: visible;
+}
+.home-header {
+  width: 100%;
+  flex-shrink: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow: hidden;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Poppins-Bold", serif;
+  color: #ffffff;
+  font-size: 45px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin: 0;
+}
+.home-text {
+  width: 100%;
+  flex-shrink: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow: hidden;
+  font-weight: 300;
+  font-style: normal;
+  font-family: "Poppins", serif;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin: 20px 0;
+}
+/* form */
+.form-header {
+  width: 100%;
+  flex-shrink: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow: hidden;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Poppins", serif;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin: 20px 0px;
+}
+.form {
+  box-sizing: border-box;
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 24px 22px -20px rgba(0, 0, 0, 0.09);
+  background-color: rgba(255, 255, 255, 0.16);
+  overflow: visible;
+  border-radius: 20px;
+  border: 1px solid #e6e6e66e;
+}
+/* end form */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* sign up */
+.signup-main {
+  height: calc(100%);
+  background: url("./assets/download.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 25vw 50px 25vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+.signup-inner {
+  box-sizing: border-box;
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3em;
+  box-shadow: 0px 24px 22px -20px rgb(0 0 0 / 9%);
+  background-color: rgb(255, 255, 255);
+  overflow: visible;
+  border-radius: 20px;
+  border: 1px solid #e6e6e66e;
+}
+.test {
+  color: #f5f5f5;
+}
+.signup-dobWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+/* end sign up */
+.stepper-style, .button-wrapper {
+  width: 100%;
+}
+/* 900px or smaller */
+@media only screen and (max-width: 860px) {
+  .signup-main {
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  .stepper-style {
+    display: none;
+  }
+  .signup-dobWrapper {
+    flex-direction: column;
+    align-items: center;
   }
 }
